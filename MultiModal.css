@@ -1,0 +1,4 @@
+/* Allow only 1 modal backdrop */
+.modal-backdrop.in ~ .modal-backdrop.in {
+    opacity: 0;
+}
