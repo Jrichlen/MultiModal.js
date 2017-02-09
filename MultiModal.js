@@ -7,9 +7,10 @@ $(function () {
 
     // Auto-stack modals
     $('body').on('show.bs.modal', '.modal', function () {
-        var modals = $('.modal.in');
-        $(this).on('hidden.bs.modal', function () {
-            modal.show();
+        var modals = $('.modal.in:not(.stacked)');
+        modals.addClass('stacked');
+        $(this).on('hide.bs.modal', function () {
+            modals.removeClass('stacked');
         });
     });
 });

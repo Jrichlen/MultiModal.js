@@ -1,4 +1,19 @@
-/* Allow only 1 modal backdrop */
 .modal-backdrop.in ~ .modal-backdrop.in {
     opacity: 0;
+}
+
+.modal {
+    overflow:hidden;
+}
+
+.modal-content {
+    opacity: 1;
+    max-height: 100%;
+    overflow: auto;
+    transition: transform ease .5s; 
+}
+
+.modal.stacked .modal-content {
+    transform: translateY(-200%);
+    transition: transform ease .5s; 
 }
